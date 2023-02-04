@@ -1,0 +1,161 @@
+
+# ~/.config/starship.toml
+
+[username]
+style_user = 'green bold'
+style_root = 'red bold'
+disabled = false
+show_always = true
+
+
+# Set the character and color
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+add_host = true
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+# Overwrite existing color
+blue = '21'
+# Define new color
+mustard = '#af8700'
+
+[hostname]
+ssh_only = false
+trim_at = '.companyname.com'
+disabled = false
+
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+ap-southeast-2 = 'au'
+us-east-1 = 'va'
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+
+[c]
+format = 'via [$name $version]($style)'
+
+[character]
+vicmd_symbol = '[V](bold green) '
+success_symbol = '[🐉](bold green) '
+error_symbol = '[->](bold red) '
+symbol = "🧙"
+
+[shell]
+fish_indicator = ''
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'purple bold'
+disabled = false
+
+[rust]
+format = 'via [⚙️ $version](red bold)'
+symbol = '🦀 '
+
+[python]
+symbol = '🐍 '
+pyenv_version_name = true
+python_binary = 'python3'
+
+
+[os.symbols]
+Alpine = "🏔️ "
+Amazon = "🙂 "
+Android = "🤖 "
+Arch = "🎗️ "
+CentOS = "💠 "
+Debian = "🌀 "
+DragonFly = "🐉 "
+Emscripten = "🔗 "
+EndeavourOS = "🚀 "
+Fedora = "🎩 "
+FreeBSD = "😈 "
+Garuda = "🦅 "
+Gentoo = "🗜️ "
+HardenedBSD = "🛡️ "
+Illumos = "🐦 "
+Linux = "🐧 "
+Macos = "🍎 "
+Manjaro = "🥭 "
+Mariner = "🌊 "
+MidnightBSD = "🌘 "
+Mint = "🌿 "
+NetBSD = "🚩 "
+NixOS = "❄️ "
+OpenBSD = "🐡 "
+openSUSE = "🦎 "
+OracleLinux = "🦴 "
+Pop = "🍭 "
+Raspbian = "🍓 "
+Redhat = "🎩 "
+RedHatEnterprise = "🎩 "
+Redox = "🧪 "
+Solus = "⛵ "
+SUSE = "🦎 "
+Ubuntu = "🎯 "
+Unknown = "❓ "
+Windows = "🪟 "
+
+
+
+[ocaml]
+format = 'via [🐪 $version]($style) '
+
+[nodejs]
+format = 'via [🤖 $version](bold green) '
+
+
+[lua]
+format = 'via [🌕 $version](bold blue) '
+
+
+[kotlin]
+symbol = '🅺 '
+
+[golang]
+format = 'via [🏎💨 $version](bold cyan) '
+
+
+[git_branch]
+symbol = "🔥 "
+truncation_length = 4
+truncation_symbol = ''
+ignore_branches = ['master', 'main']
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = '🏳'
+ahead = '🏎 ⇡${count}'
+behind = '😰 ⇣${count}'
+diverged = '😵 ⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+symbol = "⚡️ "
+
