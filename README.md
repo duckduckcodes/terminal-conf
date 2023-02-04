@@ -1,6 +1,6 @@
 # terminal-conf
 
-using (starship)[https://starship.rs/]
+using [starship](https://starship.rs/)
 
 ## usage (for ubuntu):
 
